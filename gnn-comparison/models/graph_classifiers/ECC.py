@@ -4,7 +4,11 @@ from torch import nn
 from torch.nn import functional as F
 from torch_geometric.nn import MessagePassing, global_mean_pool
 from torch_geometric.utils import degree, dense_to_sparse
-from torch_geometric.nn import ECConv
+try:
+    from torch_geometric.nn import ECConv
+except ImportError:
+    # PyG no longer exports ECConv at top-level in some versions; NNConv is a drop-in edge-conditioned conv
+    from torch_geometric.nn import NNConv as ECConv
 from torch_scatter import scatter_add
 from utils.batch_utils import _make_block_diag
 

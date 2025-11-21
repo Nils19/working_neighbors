@@ -8,6 +8,8 @@ Options:
     --num-runs NUM    Number of runs to perform for each configuration. [default: 5]
     --debug           Turn on debugger.
 """
+
+import sys
 import os
 import subprocess
 import re
@@ -16,12 +18,12 @@ import numpy as np
 from docopt import docopt
 from dpu_utils.utils import run_and_debug
 
-#MODEL_TYPES = ["GGNN", "RGCN", "RGAT", "RGIN", "GNN-Edge-MLP0", "GNN-Edge-MLP1", "GNN_FiLM"]
-MODEL_TYPES = ["GNN-Edge-MLP0"] #, "RGAT", "GNN_FiLM"] # ["GGNN", "RGCN", "RGAT", "RGIN", "GNN-Edge-MLP0", "GNN-Edge-MLP1", "GNN_FiLM"]
+# MODEL_TYPES = ["GGNN", "RGCN", "RGAT", "RGIN", "GNN-Edge-MLP0", "GNN-Edge-MLP1", "GNN_FiLM"]
+MODEL_TYPES = ["GNN-Edge-MLP0"]
 TASKS = ["mu", "alpha", "HOMO", "LUMO", "gap", "R2", "ZPVE", "U0", "U", "H", "G", "Cv", "Omega"]
 
-TEST_RES_RE = re.compile('^Metrics: MAEs: \d+:([0-9.]+) \| Error Ratios: \d+:([0-9.]+)')
-TIME_RE = re.compile('^Training took (\d+)s')
+TEST_RES_RE = re.compile(r'^Metrics: MAEs: \d+:([0-9.]+) \| Error Ratios: \d+:([0-9.]+)')
+TIME_RE = re.compile(r'^Training took (\d+)s')
 
 
 def run(args):
@@ -36,26 +38,27 @@ def run(args):
             for seed in range(1, 1 + num_seeds):
                 logfile = os.path.join(target_dir, "%s_task%i_seed%i.txt" % (model, task_id, seed))
                 with open(logfile, "w") as log_fh:
-                    subprocess.check_call(["python",
-                                           "train.py",
-                                           "--run-test",
-                                           model,
-                                           "QM9",
-                                           "--model-param-overrides",
-                                           "{\"random_seed\": %i,\"last_layer_fa\":true,\"max_nodes_in_batch\":30000}" % seed,
-                                           "--task-param-overrides",
-                                           "{\"task_ids\": [%i]}" % task_id,
-                                           ],
-                                          stdout=log_fh,
-                                          stderr=log_fh)
+                    subprocess.check_call([
+                        sys.executable,          # <-- use current interpreter
+                        "train.py",
+                        "--run-test",
+                        model,
+                        "QM9",
+                        "--model-param-overrides",
+                        "{\"random_seed\": %i, \"last_layer_fa\": true, \"max_nodes_in_batch\": 30000}" % seed,
+                        "--task-param-overrides",
+                        "{\"task_ids\": [%i]}" % task_id,
+                    ], stdout=log_fh, stderr=log_fh)
+
                 with open(logfile, "r") as log_fh:
-                    for line in log_fh.readlines():
-                        time_match = TIME_RE.search(line)
-                        res_match = TEST_RES_RE.search(line)
-                        if time_match is not None:
-                            results[model][task_id]["times"].append(int(time_match.groups()[0]))
-                        elif res_match is not None:
-                            results[model][task_id]["test_errors"].append(float(res_match.groups()[1]))
+                    for line in log_fh:
+                        m = TIME_RE.search(line)
+                        if m is not None:
+                            results[model][task_id]["times"].append(int(m.group(1)))
+                            continue
+                        m = TEST_RES_RE.search(line)
+                        if m is not None:
+                            results[model][task_id]["test_errors"].append(float(m.group(2)))
 
     row_fmt_string = "%7s " + "&% 35s " * len(MODEL_TYPES) + "\\\\"
     print(row_fmt_string % tuple([""] + MODEL_TYPES))
@@ -65,7 +68,7 @@ def run(args):
             err = np.mean(results[model][task_id]["test_errors"])
             std = np.std(results[model][task_id]["test_errors"])
             time_in_min = np.mean(results[model][task_id]["times"]) / 60
-            model_results.append("%.2f & ($\pm %.2f$; $%.1f$min)" % (err, std, time_in_min))
+            model_results.append(r"%.2f & ($\pm %.2f$; $%.1f$min)" % (err, std, time_in_min))
         print(row_fmt_string % tuple([task] + model_results))
 
 
