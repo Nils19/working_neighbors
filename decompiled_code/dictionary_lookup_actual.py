@@ -51,7 +51,7 @@ class DictionaryLookupDataset(TreeDataset):
 
     def label(self, combination):
         selected_key, values = combination
-        return int(values[selected_key - 1]) - 1   # Convert 1-indexed to 0-indexed
+        return int(values[selected_key - 1]) - 1  # Convert 1-indexed to 0-indexed
 
     def get_dims(self):
         # get input and output dims

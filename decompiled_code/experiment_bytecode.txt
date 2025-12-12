@@ -1,0 +1,1157 @@
+================================================================================
+BYTECODE DISASSEMBLY: __pycache__/experiment.cpython-314.pyc
+================================================================================
+
+  0           RESUME                   0
+
+  1           LOAD_SMALL_INT           0
+              LOAD_CONST               1 (None)
+              IMPORT_NAME              0 (torch)
+              STORE_NAME               0 (torch)
+
+  2           LOAD_SMALL_INT           0
+              LOAD_CONST               2 (('DataLoader',))
+              IMPORT_NAME              1 (torch_geometric.data)
+              IMPORT_FROM              2 (DataLoader)
+              STORE_NAME               2 (DataLoader)
+              POP_TOP
+
+  3           LOAD_SMALL_INT           0
+              LOAD_CONST               3 (('ReduceLROnPlateau',))
+              IMPORT_NAME              3 (torch.optim.lr_scheduler)
+              IMPORT_FROM              4 (ReduceLROnPlateau)
+              STORE_NAME               4 (ReduceLROnPlateau)
+              POP_TOP
+
+  5           LOAD_SMALL_INT           0
+              LOAD_CONST               1 (None)
+              IMPORT_NAME              5 (numpy)
+              STORE_NAME               6 (np)
+
+  6           LOAD_SMALL_INT           0
+              LOAD_CONST               1 (None)
+              IMPORT_NAME              7 (random)
+              STORE_NAME               7 (random)
+
+  7           LOAD_SMALL_INT           0
+              LOAD_CONST               4 (('AttrDict',))
+              IMPORT_NAME              8 (attrdict)
+              IMPORT_FROM              9 (AttrDict)
+              STORE_NAME               9 (AttrDict)
+              POP_TOP
+
+  9           LOAD_SMALL_INT           0
+              LOAD_CONST               5 (('STOP',))
+              IMPORT_NAME             10 (common)
+              IMPORT_FROM             11 (STOP)
+              STORE_NAME              11 (STOP)
+              POP_TOP
+
+ 10           LOAD_SMALL_INT           0
+              LOAD_CONST               6 (('GraphModel',))
+              IMPORT_NAME             12 (models.graph_model)
+              IMPORT_FROM             13 (GraphModel)
+              STORE_NAME              13 (GraphModel)
+              POP_TOP
+
+ 13           LOAD_BUILD_CLASS
+              PUSH_NULL
+              LOAD_CONST               7 (<code object Experiment at 0x1009d29a0, file "/Users/nilscollins/Documents/TUM/bottleneck/experiment.py", line 13>)
+              MAKE_FUNCTION
+              LOAD_CONST               8 ('Experiment')
+              CALL                     2
+              STORE_NAME              14 (Experiment)
+              LOAD_CONST               1 (None)
+              RETURN_VALUE
+
+Disassembly of <code object Experiment at 0x1009d29a0, file "/Users/nilscollins/Documents/TUM/bottleneck/experiment.py", line 13>:
+  --           MAKE_CELL                0 (__classdict__)
+
+  13           RESUME                   0
+               LOAD_NAME                0 (__name__)
+               STORE_NAME               1 (__module__)
+               LOAD_CONST               0 ('Experiment')
+               STORE_NAME               2 (__qualname__)
+               LOAD_SMALL_INT          13
+               STORE_NAME               3 (__firstlineno__)
+               LOAD_LOCALS
+               STORE_DEREF              0 (__classdict__)
+
+  14           LOAD_CONST               1 (<code object __init__ at 0x11d809600, file "/Users/nilscollins/Documents/TUM/bottleneck/experiment.py", line 14>)
+               MAKE_FUNCTION
+               STORE_NAME               4 (__init__)
+
+  73           LOAD_CONST               2 (<code object print_args at 0x1007f34b0, file "/Users/nilscollins/Documents/TUM/bottleneck/experiment.py", line 73>)
+               MAKE_FUNCTION
+               STORE_NAME               5 (print_args)
+
+  82           LOAD_CONST               3 (<code object worker_init_fn at 0x1009f5ac0, file "/Users/nilscollins/Documents/TUM/bottleneck/experiment.py", line 82>)
+               MAKE_FUNCTION
+               STORE_NAME               6 (worker_init_fn)
+
+  87           LOAD_CONST               4 (<code object run at 0x11d80b800, file "/Users/nilscollins/Documents/TUM/bottleneck/experiment.py", line 87>)
+               MAKE_FUNCTION
+               STORE_NAME               7 (run)
+
+ 181           LOAD_CONST               5 (<code object eval at 0x11d6049a0, file "/Users/nilscollins/Documents/TUM/bottleneck/experiment.py", line 181>)
+               MAKE_FUNCTION
+               STORE_NAME               8 (eval)
+               LOAD_CONST               6 (('X_test', 'X_train', 'accum_grad', 'batch_size', 'criterion', 'depth', 'device', 'dim', 'eval_every', 'loader_workers', 'max_epochs', 'model', 'patience', 'seed', 'stopping_criterion', 'task', 'train_fraction', 'unroll'))
+               STORE_NAME               9 (__static_attributes__)
+               LOAD_FAST_BORROW         0 (__classdict__)
+               STORE_NAME              10 (__classdictcell__)
+               LOAD_CONST               7 (None)
+               RETURN_VALUE
+
+Disassembly of <code object __init__ at 0x11d809600, file "/Users/nilscollins/Documents/TUM/bottleneck/experiment.py", line 14>:
+ 14           RESUME                   0
+
+ 15           LOAD_FAST_BORROW         1 (args)
+              LOAD_ATTR                0 (task)
+              LOAD_FAST_BORROW         0 (self)
+              STORE_ATTR               0 (task)
+
+ 16           LOAD_FAST_BORROW         1 (args)
+              LOAD_ATTR                2 (type)
+              STORE_FAST               2 (gnn_type)
+
+ 17           LOAD_FAST_BORROW         1 (args)
+              LOAD_ATTR                4 (depth)
+              LOAD_FAST_BORROW         0 (self)
+              STORE_ATTR               2 (depth)
+
+ 18           LOAD_FAST_BORROW         1 (args)
+              LOAD_ATTR                6 (num_layers)
+              POP_JUMP_IF_NOT_NONE    13 (to L1)
+              NOT_TAKEN
+              LOAD_FAST_BORROW         0 (self)
+              LOAD_ATTR                4 (depth)
+              JUMP_FORWARD            11 (to L2)
+      L1:     LOAD_FAST_BORROW         1 (args)
+              LOAD_ATTR                6 (num_layers)
+      L2:     STORE_FAST               3 (num_layers)
+
+ 19           LOAD_FAST_BORROW         1 (args)
+              LOAD_ATTR                8 (dim)
+              LOAD_FAST_BORROW         0 (self)
+              STORE_ATTR               4 (dim)
+
+ 20           LOAD_FAST_BORROW         1 (args)
+              LOAD_ATTR               10 (unroll)
+              LOAD_FAST_BORROW         0 (self)
+              STORE_ATTR               5 (unroll)
+
+ 21           LOAD_FAST_BORROW         1 (args)
+              LOAD_ATTR               12 (train_fraction)
+              LOAD_FAST_BORROW         0 (self)
+              STORE_ATTR               6 (train_fraction)
+
+ 22           LOAD_FAST_BORROW         1 (args)
+              LOAD_ATTR               14 (max_epochs)
+              LOAD_FAST_BORROW         0 (self)
+              STORE_ATTR               7 (max_epochs)
+
+ 23           LOAD_FAST_BORROW         1 (args)
+              LOAD_ATTR               16 (batch_size)
+              LOAD_FAST_BORROW         0 (self)
+              STORE_ATTR               8 (batch_size)
+
+ 24           LOAD_FAST_BORROW         1 (args)
+              LOAD_ATTR               18 (accum_grad)
+              LOAD_FAST_BORROW         0 (self)
+              STORE_ATTR               9 (accum_grad)
+
+ 25           LOAD_FAST_BORROW         1 (args)
+              LOAD_ATTR               20 (eval_every)
+              LOAD_FAST_BORROW         0 (self)
+              STORE_ATTR              10 (eval_every)
+
+ 27           LOAD_GLOBAL             22 (torch)
+              LOAD_ATTR               24 (cuda)
+              LOAD_ATTR               27 (is_available + NULL|self)
+              CALL                     0
+              TO_BOOL
+              POP_JUMP_IF_FALSE       29 (to L3)
+              NOT_TAKEN
+
+ 28           LOAD_GLOBAL             22 (torch)
+              LOAD_ATTR               28 (device)
+              PUSH_NULL
+              LOAD_CONST               1 ('cuda')
+              CALL                     1
+              LOAD_FAST_BORROW         0 (self)
+              STORE_ATTR              14 (device)
+              JUMP_FORWARD           133 (to L5)
+
+ 29   L3:     LOAD_GLOBAL             31 (hasattr + NULL)
+              LOAD_GLOBAL             22 (torch)
+              LOAD_ATTR               32 (backends)
+              LOAD_CONST               2 ('mps')
+              CALL                     2
+              TO_BOOL
+              POP_JUMP_IF_FALSE       75 (to L4)
+              NOT_TAKEN
+              LOAD_GLOBAL             22 (torch)
+              LOAD_ATTR               32 (backends)
+              LOAD_ATTR               34 (mps)
+              LOAD_ATTR               27 (is_available + NULL|self)
+              CALL                     0
+              TO_BOOL
+              POP_JUMP_IF_FALSE       29 (to L4)
+              NOT_TAKEN
+
+ 30           LOAD_GLOBAL             22 (torch)
+              LOAD_ATTR               28 (device)
+              PUSH_NULL
+              LOAD_CONST               2 ('mps')
+              CALL                     1
+              LOAD_FAST_BORROW         0 (self)
+              STORE_ATTR              14 (device)
+              JUMP_FORWARD            27 (to L5)
+
+ 32   L4:     LOAD_GLOBAL             22 (torch)
+              LOAD_ATTR               28 (device)
+              PUSH_NULL
+              LOAD_CONST               3 ('cpu')
+              CALL                     1
+              LOAD_FAST_BORROW         0 (self)
+              STORE_ATTR              14 (device)
+
+ 35   L5:     LOAD_SMALL_INT           0
+              LOAD_FAST_BORROW         0 (self)
+              STORE_ATTR              18 (loader_workers)
+
+ 36           LOAD_FAST_BORROW         1 (args)
+              LOAD_ATTR               36 (loader_workers)
+              LOAD_SMALL_INT           0
+              COMPARE_OP             148 (bool(>))
+              POP_JUMP_IF_FALSE       26 (to L6)
+              NOT_TAKEN
+
+ 37           LOAD_GLOBAL             39 (print + NULL)
+              LOAD_CONST               4 ('Warning: Forcing loader_workers=0 to avoid multiprocessing issues (was ')
+              LOAD_FAST_BORROW         1 (args)
+              LOAD_ATTR               36 (loader_workers)
+              FORMAT_SIMPLE
+              LOAD_CONST               5 (')')
+              BUILD_STRING             3
+              CALL                     1
+              POP_TOP
+
+ 39   L6:     LOAD_FAST_BORROW         1 (args)
+              LOAD_ATTR               40 (stop)
+              LOAD_FAST_BORROW         0 (self)
+              STORE_ATTR              21 (stopping_criterion)
+
+ 40           LOAD_FAST_BORROW         1 (args)
+              LOAD_ATTR               44 (patience)
+              LOAD_FAST_BORROW         0 (self)
+              STORE_ATTR              22 (patience)
+
+ 42           LOAD_SMALL_INT          11
+              STORE_FAST               4 (seed)
+
+ 43           LOAD_GLOBAL             22 (torch)
+              LOAD_ATTR               46 (manual_seed)
+              PUSH_NULL
+              LOAD_FAST_BORROW         4 (seed)
+              CALL                     1
+              POP_TOP
+
+ 44           LOAD_GLOBAL             48 (np)
+              LOAD_ATTR               50 (random)
+              LOAD_ATTR               53 (seed + NULL|self)
+              LOAD_FAST_BORROW         4 (seed)
+              CALL                     1
+              POP_TOP
+
+ 45           LOAD_GLOBAL             50 (random)
+              LOAD_ATTR               52 (seed)
+              PUSH_NULL
+              LOAD_FAST_BORROW         4 (seed)
+              CALL                     1
+              POP_TOP
+
+ 46           LOAD_GLOBAL             22 (torch)
+              LOAD_ATTR               24 (cuda)
+              LOAD_ATTR               27 (is_available + NULL|self)
+              CALL                     0
+              TO_BOOL
+              POP_JUMP_IF_FALSE      125 (to L7)
+              NOT_TAKEN
+
+ 47           LOAD_GLOBAL             22 (torch)
+              LOAD_ATTR               24 (cuda)
+              LOAD_ATTR               47 (manual_seed + NULL|self)
+              LOAD_FAST_BORROW         4 (seed)
+              CALL                     1
+              POP_TOP
+
+ 48           LOAD_GLOBAL             22 (torch)
+              LOAD_ATTR               24 (cuda)
+              LOAD_ATTR               55 (manual_seed_all + NULL|self)
+              LOAD_FAST_BORROW         4 (seed)
+              CALL                     1
+              POP_TOP
+
+ 49           LOAD_CONST               6 (True)
+              LOAD_GLOBAL             22 (torch)
+              LOAD_ATTR               32 (backends)
+              LOAD_ATTR               56 (cudnn)
+              STORE_ATTR              29 (deterministic)
+
+ 50           LOAD_CONST               7 (False)
+              LOAD_GLOBAL             22 (torch)
+              LOAD_ATTR               32 (backends)
+              LOAD_ATTR               56 (cudnn)
+              STORE_ATTR              30 (benchmark)
+
+ 52   L7:     LOAD_FAST_BORROW_LOAD_FAST_BORROW 64 (seed, self)
+              STORE_ATTR              26 (seed)
+
+ 54           LOAD_FAST_BORROW         0 (self)
+              LOAD_ATTR                0 (task)
+              LOAD_ATTR               63 (get_dataset + NULL|self)
+              LOAD_FAST_BORROW         0 (self)
+              LOAD_ATTR                4 (depth)
+              LOAD_FAST_BORROW         0 (self)
+              LOAD_ATTR               12 (train_fraction)
+              CALL                     2
+
+ 53           UNPACK_SEQUENCE          5
+              LOAD_FAST_BORROW         0 (self)
+              STORE_ATTR              32 (X_train)
+              LOAD_FAST_BORROW         0 (self)
+              STORE_ATTR              33 (X_test)
+              STORE_FAST_STORE_FAST   86 (dim0, out_dim)
+              LOAD_FAST_BORROW         0 (self)
+              STORE_ATTR              34 (criterion)
+
+ 56           LOAD_GLOBAL             71 (GraphModel + NULL)
+              LOAD_FAST_BORROW_LOAD_FAST_BORROW 35 (gnn_type, num_layers)
+              LOAD_FAST_BORROW_LOAD_FAST_BORROW 80 (dim0, self)
+              LOAD_ATTR                8 (dim)
+              LOAD_FAST_BORROW         6 (out_dim)
+
+ 57           LOAD_FAST_BORROW         1 (args)
+              LOAD_ATTR               72 (last_layer_fully_adjacent)
+              LOAD_FAST_BORROW         1 (args)
+              LOAD_ATTR               10 (unroll)
+
+ 58           LOAD_FAST_BORROW         1 (args)
+              LOAD_ATTR               74 (no_layer_norm)
+              TO_BOOL
+              UNARY_NOT
+
+ 59           LOAD_FAST_BORROW         1 (args)
+              LOAD_ATTR               76 (no_activation)
+              TO_BOOL
+              UNARY_NOT
+
+ 60           LOAD_FAST_BORROW         1 (args)
+              LOAD_ATTR               78 (no_residual)
+              TO_BOOL
+              UNARY_NOT
+
+ 56           LOAD_CONST               8 (('gnn_type', 'num_layers', 'dim0', 'h_dim', 'out_dim', 'last_layer_fully_adjacent', 'unroll', 'layer_norm', 'use_activation', 'use_residual'))
+              CALL_KW                 10
+
+ 61           LOAD_ATTR               81 (to + NULL|self)
+              LOAD_FAST_BORROW         0 (self)
+              LOAD_ATTR               28 (device)
+              CALL                     1
+
+ 56           LOAD_FAST_BORROW         0 (self)
+              STORE_ATTR              41 (model)
+
+ 63           LOAD_GLOBAL             39 (print + NULL)
+              LOAD_CONST               9 ('Starting experiment')
+              CALL                     1
+              POP_TOP
+
+ 64           LOAD_GLOBAL             39 (print + NULL)
+              LOAD_CONST              10 ('Using device: ')
+              LOAD_FAST_BORROW         0 (self)
+              LOAD_ATTR               28 (device)
+              FORMAT_SIMPLE
+              BUILD_STRING             2
+              CALL                     1
+              POP_TOP
+
+ 65           LOAD_FAST_BORROW         0 (self)
+              LOAD_ATTR               28 (device)
+              LOAD_ATTR                2 (type)
+              LOAD_CONST               1 ('cuda')
+              COMPARE_OP              88 (bool(==))
+              POP_JUMP_IF_FALSE      107 (to L8)
+              NOT_TAKEN
+
+ 66           LOAD_GLOBAL             39 (print + NULL)
+              LOAD_CONST              11 ('GPU: ')
+              LOAD_GLOBAL             22 (torch)
+              LOAD_ATTR               24 (cuda)
+              LOAD_ATTR               85 (get_device_name + NULL|self)
+              LOAD_SMALL_INT           0
+              CALL                     1
+              FORMAT_SIMPLE
+              BUILD_STRING             2
+              CALL                     1
+              POP_TOP
+
+ 67           LOAD_GLOBAL             39 (print + NULL)
+              LOAD_CONST              12 ('GPU Memory: ')
+              LOAD_GLOBAL             22 (torch)
+              LOAD_ATTR               24 (cuda)
+              LOAD_ATTR               87 (get_device_properties + NULL|self)
+              LOAD_SMALL_INT           0
+              CALL                     1
+              LOAD_ATTR               88 (total_memory)
+              LOAD_CONST              18 (1073741824)
+              BINARY_OP               11 (/)
+              LOAD_CONST              13 ('.2f')
+              FORMAT_WITH_SPEC
+              LOAD_CONST              14 (' GB')
+              BUILD_STRING             3
+              CALL                     1
+              POP_TOP
+              JUMP_FORWARD            38 (to L9)
+
+ 68   L8:     LOAD_FAST_BORROW         0 (self)
+              LOAD_ATTR               28 (device)
+              LOAD_ATTR                2 (type)
+              LOAD_CONST               2 ('mps')
+              COMPARE_OP              88 (bool(==))
+              POP_JUMP_IF_FALSE       12 (to L9)
+              NOT_TAKEN
+
+ 69           LOAD_GLOBAL             39 (print + NULL)
+              LOAD_CONST              15 ('Using Apple Metal Performance Shaders (MPS)')
+              CALL                     1
+              POP_TOP
+
+ 70   L9:     LOAD_FAST_BORROW         0 (self)
+              LOAD_ATTR               91 (print_args + NULL|self)
+              LOAD_FAST_BORROW         1 (args)
+              CALL                     1
+              POP_TOP
+
+ 71           LOAD_GLOBAL             39 (print + NULL)
+              LOAD_CONST              16 ('Training examples: ')
+              LOAD_GLOBAL             93 (len + NULL)
+              LOAD_FAST_BORROW         0 (self)
+              LOAD_ATTR               64 (X_train)
+              CALL                     1
+              FORMAT_SIMPLE
+              LOAD_CONST              17 (', test examples: ')
+              LOAD_GLOBAL             93 (len + NULL)
+              LOAD_FAST_BORROW         0 (self)
+              LOAD_ATTR               66 (X_test)
+              CALL                     1
+              FORMAT_SIMPLE
+              BUILD_STRING             4
+              CALL                     1
+              POP_TOP
+              LOAD_CONST               0 (None)
+              RETURN_VALUE
+
+Disassembly of <code object print_args at 0x1007f34b0, file "/Users/nilscollins/Documents/TUM/bottleneck/experiment.py", line 73>:
+ 73           RESUME                   0
+
+ 74           LOAD_GLOBAL              1 (type + NULL)
+              LOAD_FAST_BORROW         1 (args)
+              CALL                     1
+              LOAD_GLOBAL              2 (AttrDict)
+              IS_OP                    0 (is)
+              POP_JUMP_IF_FALSE       43 (to L3)
+              NOT_TAKEN
+
+ 75           LOAD_FAST_BORROW         1 (args)
+              LOAD_ATTR                5 (items + NULL|self)
+              CALL                     0
+              GET_ITER
+      L1:     FOR_ITER                21 (to L2)
+              UNPACK_SEQUENCE          2
+              STORE_FAST_STORE_FAST   35 (key, value)
+
+ 76           LOAD_GLOBAL              7 (print + NULL)
+              LOAD_FAST_BORROW         2 (key)
+              FORMAT_SIMPLE
+              LOAD_CONST               0 (': ')
+              LOAD_FAST_BORROW         3 (value)
+              FORMAT_SIMPLE
+              BUILD_STRING             3
+              CALL                     1
+              POP_TOP
+              JUMP_BACKWARD           23 (to L1)
+
+ 75   L2:     END_FOR
+              POP_ITER
+              JUMP_FORWARD            43 (to L6)
+
+ 78   L3:     LOAD_GLOBAL              9 (vars + NULL)
+              LOAD_FAST_BORROW         1 (args)
+              CALL                     1
+              GET_ITER
+      L4:     FOR_ITER                28 (to L5)
+              STORE_FAST               4 (arg)
+
+ 79           LOAD_GLOBAL              7 (print + NULL)
+              LOAD_FAST_BORROW         4 (arg)
+              FORMAT_SIMPLE
+              LOAD_CONST               0 (': ')
+              LOAD_GLOBAL             11 (getattr + NULL)
+              LOAD_FAST_BORROW_LOAD_FAST_BORROW 20 (args, arg)
+              CALL                     2
+              FORMAT_SIMPLE
+              BUILD_STRING             3
+              CALL                     1
+              POP_TOP
+              JUMP_BACKWARD           30 (to L4)
+
+ 78   L5:     END_FOR
+              POP_ITER
+
+ 80   L6:     LOAD_GLOBAL              7 (print + NULL)
+              CALL                     0
+              POP_TOP
+              LOAD_CONST               1 (None)
+              RETURN_VALUE
+
+Disassembly of <code object worker_init_fn at 0x1009f5ac0, file "/Users/nilscollins/Documents/TUM/bottleneck/experiment.py", line 82>:
+ 82           RESUME                   0
+
+ 84           LOAD_GLOBAL              0 (np)
+              LOAD_ATTR                2 (random)
+              LOAD_ATTR                5 (seed + NULL|self)
+              LOAD_FAST_BORROW         0 (self)
+              LOAD_ATTR                4 (seed)
+              LOAD_FAST_BORROW         1 (worker_id)
+              BINARY_OP                0 (+)
+              CALL                     1
+              POP_TOP
+
+ 85           LOAD_GLOBAL              2 (random)
+              LOAD_ATTR                4 (seed)
+              PUSH_NULL
+              LOAD_FAST_BORROW         0 (self)
+              LOAD_ATTR                4 (seed)
+              LOAD_FAST_BORROW         1 (worker_id)
+              BINARY_OP                0 (+)
+              CALL                     1
+              POP_TOP
+              LOAD_CONST               1 (None)
+              RETURN_VALUE
+
+Disassembly of <code object run at 0x11d80b800, file "/Users/nilscollins/Documents/TUM/bottleneck/experiment.py", line 87>:
+  87            RESUME                   0
+
+  88            LOAD_GLOBAL              0 (torch)
+                LOAD_ATTR                2 (optim)
+                LOAD_ATTR                5 (Adam + NULL|self)
+                LOAD_FAST_BORROW         0 (self)
+                LOAD_ATTR                6 (model)
+                LOAD_ATTR                9 (parameters + NULL|self)
+                CALL                     0
+                LOAD_CONST               0 (0.001)
+                LOAD_CONST               1 (('lr',))
+                CALL_KW                  2
+                STORE_FAST               1 (optimizer)
+
+  89            LOAD_CONST               2 (1000)
+                LOAD_FAST_BORROW         0 (self)
+                LOAD_ATTR               10 (eval_every)
+                BINARY_OP                2 (//)
+                STORE_FAST               2 (scheduler_patience)
+
+  90            LOAD_GLOBAL             13 (ReduceLROnPlateau + NULL)
+                LOAD_FAST_BORROW         1 (optimizer)
+                LOAD_CONST               3 ('max')
+                LOAD_CONST               4 ('abs')
+                LOAD_CONST               5 (0.5)
+                LOAD_FAST_BORROW         2 (scheduler_patience)
+                LOAD_CONST               6 (('mode', 'threshold_mode', 'factor', 'patience'))
+                CALL_KW                  5
+                STORE_FAST               3 (scheduler)
+
+  91            LOAD_GLOBAL             15 (print + NULL)
+                LOAD_CONST               7 ('Starting training')
+                CALL                     1
+                POP_TOP
+
+  93            LOAD_CONST               8 (0.0)
+                STORE_FAST               4 (best_test_acc)
+
+  94            LOAD_CONST               8 (0.0)
+                STORE_FAST               5 (best_train_acc)
+
+  95            LOAD_SMALL_INT           0
+                STORE_FAST               6 (best_epoch)
+
+  96            LOAD_SMALL_INT           0
+                STORE_FAST               7 (epochs_since_improvement)
+
+  97            LOAD_CONST               9 (0.0001)
+                STORE_FAST               8 (stopping_threshold)
+
+  99            LOAD_FAST_BORROW         1 (optimizer)
+                LOAD_ATTR               17 (zero_grad + NULL|self)
+                CALL                     0
+                POP_TOP
+
+ 101            LOAD_GLOBAL             19 (range + NULL)
+                LOAD_SMALL_INT           1
+                LOAD_FAST_BORROW         0 (self)
+                LOAD_ATTR               20 (max_epochs)
+                LOAD_FAST_BORROW         0 (self)
+                LOAD_ATTR               10 (eval_every)
+                BINARY_OP                2 (//)
+                LOAD_SMALL_INT           1
+                BINARY_OP                0 (+)
+                CALL                     2
+                GET_ITER
+        L1:     EXTENDED_ARG             3
+                FOR_ITER               856 (to L19)
+                STORE_FAST               9 (epoch)
+
+ 102            LOAD_FAST_BORROW         0 (self)
+                LOAD_ATTR                6 (model)
+                LOAD_ATTR               23 (train + NULL|self)
+                CALL                     0
+                POP_TOP
+
+ 105            LOAD_SMALL_INT           0
+                STORE_FAST              10 (total_loss)
+
+ 106            LOAD_SMALL_INT           0
+                STORE_FAST              11 (total_num_examples)
+
+ 107            LOAD_SMALL_INT           0
+                STORE_FAST              12 (train_correct)
+
+ 109            LOAD_GLOBAL             19 (range + NULL)
+                LOAD_FAST_BORROW         0 (self)
+                LOAD_ATTR               10 (eval_every)
+                CALL                     1
+                GET_ITER
+        L2:     EXTENDED_ARG             1
+                FOR_ITER               450 (to L8)
+                STORE_FAST              13 (sub_epoch)
+
+ 110            LOAD_FAST_BORROW         0 (self)
+                LOAD_ATTR               24 (device)
+                LOAD_ATTR               26 (type)
+                LOAD_CONST              10 ('cuda')
+                COMPARE_OP              72 (==)
+                STORE_FAST              14 (pin_memory)
+
+ 111            LOAD_GLOBAL             29 (DataLoader + NULL)
+                LOAD_FAST_BORROW         0 (self)
+                LOAD_ATTR               30 (X_train)
+                LOAD_FAST_BORROW         0 (self)
+                LOAD_ATTR               32 (batch_size)
+                LOAD_CONST              11 (True)
+
+ 112            LOAD_FAST_LOAD_FAST    224 (pin_memory, self)
+                LOAD_ATTR               34 (loader_workers)
+
+ 113            LOAD_FAST_BORROW         0 (self)
+                LOAD_ATTR               34 (loader_workers)
+                LOAD_SMALL_INT           0
+                COMPARE_OP             148 (bool(>))
+                POP_JUMP_IF_FALSE       13 (to L3)
+                NOT_TAKEN
+                LOAD_FAST_BORROW         0 (self)
+                LOAD_ATTR               36 (worker_init_fn)
+                JUMP_FORWARD             1 (to L4)
+        L3:     LOAD_CONST              12 (None)
+
+ 111    L4:     LOAD_CONST              13 (('batch_size', 'shuffle', 'pin_memory', 'num_workers', 'worker_init_fn'))
+                CALL_KW                  6
+                STORE_FAST              15 (loader)
+
+ 115            LOAD_GLOBAL             39 (enumerate + NULL)
+                LOAD_FAST_BORROW        15 (loader)
+                CALL                     1
+                GET_ITER
+        L5:     EXTENDED_ARG             1
+                FOR_ITER               330 (to L7)
+                UNPACK_SEQUENCE          2
+                STORE_FAST              16 (i)
+                STORE_FAST              17 (batch)
+
+ 116            LOAD_FAST_BORROW        17 (batch)
+                LOAD_ATTR               41 (to + NULL|self)
+                LOAD_FAST_BORROW         0 (self)
+                LOAD_ATTR               24 (device)
+                CALL                     1
+                STORE_FAST              17 (batch)
+
+ 117            LOAD_FAST_BORROW         0 (self)
+                LOAD_ATTR                7 (model + NULL|self)
+                LOAD_FAST_BORROW        17 (batch)
+                CALL                     1
+                STORE_FAST              18 (out)
+
+ 118            LOAD_FAST_BORROW         0 (self)
+                LOAD_ATTR               43 (criterion + NULL|self)
+                LOAD_FAST_BORROW        18 (out)
+                LOAD_FAST_BORROW        17 (batch)
+                LOAD_ATTR               44 (y)
+                LOAD_CONST              14 (('input', 'target'))
+                CALL_KW                  2
+                STORE_FAST              19 (loss)
+
+ 120            LOAD_FAST_BORROW        17 (batch)
+                LOAD_ATTR               44 (y)
+                LOAD_ATTR               47 (size + NULL|self)
+                LOAD_SMALL_INT           0
+                CALL                     1
+                STORE_FAST              20 (num_examples)
+
+ 122            LOAD_FAST_BORROW        11 (total_num_examples)
+                LOAD_FAST_BORROW        20 (num_examples)
+                BINARY_OP               13 (+=)
+                STORE_FAST              11 (total_num_examples)
+
+ 123            LOAD_FAST_BORROW        10 (total_loss)
+                LOAD_FAST_BORROW        19 (loss)
+                LOAD_ATTR               49 (item + NULL|self)
+                CALL                     0
+                LOAD_FAST_BORROW        20 (num_examples)
+                BINARY_OP                5 (*)
+                BINARY_OP               13 (+=)
+                STORE_FAST              10 (total_loss)
+
+ 125            LOAD_FAST_BORROW        18 (out)
+                LOAD_ATTR               51 (max + NULL|self)
+                LOAD_SMALL_INT           1
+                LOAD_CONST              15 (('dim',))
+                CALL_KW                  1
+                UNPACK_SEQUENCE          2
+                STORE_FAST              21 (_)
+                STORE_FAST              22 (train_pred)
+
+ 126            LOAD_FAST_BORROW        12 (train_correct)
+                LOAD_FAST_BORROW        22 (train_pred)
+                LOAD_ATTR               53 (eq + NULL|self)
+                LOAD_FAST_BORROW        17 (batch)
+                LOAD_ATTR               44 (y)
+                CALL                     1
+                LOAD_ATTR               55 (sum + NULL|self)
+                CALL                     0
+                LOAD_ATTR               49 (item + NULL|self)
+                CALL                     0
+                BINARY_OP               13 (+=)
+                STORE_FAST              12 (train_correct)
+
+ 128            LOAD_FAST_BORROW        19 (loss)
+                LOAD_FAST_BORROW         0 (self)
+                LOAD_ATTR               56 (accum_grad)
+                BINARY_OP               11 (/)
+                STORE_FAST              19 (loss)
+
+ 129            LOAD_FAST_BORROW        19 (loss)
+                LOAD_ATTR               59 (backward + NULL|self)
+                CALL                     0
+                POP_TOP
+
+ 130            LOAD_FAST_BORROW        16 (i)
+                LOAD_SMALL_INT           1
+                BINARY_OP                0 (+)
+                LOAD_FAST_BORROW         0 (self)
+                LOAD_ATTR               56 (accum_grad)
+                BINARY_OP                6 (%)
+                LOAD_SMALL_INT           0
+                COMPARE_OP              88 (bool(==))
+                POP_JUMP_IF_TRUE         4 (to L6)
+                NOT_TAKEN
+                EXTENDED_ARG             1
+                JUMP_BACKWARD          298 (to L5)
+
+ 131    L6:     LOAD_FAST_BORROW         1 (optimizer)
+                LOAD_ATTR               61 (step + NULL|self)
+                CALL                     0
+                POP_TOP
+
+ 132            LOAD_FAST_BORROW         1 (optimizer)
+                LOAD_ATTR               17 (zero_grad + NULL|self)
+                CALL                     0
+                POP_TOP
+                EXTENDED_ARG             1
+                JUMP_BACKWARD          333 (to L5)
+
+ 115    L7:     END_FOR
+                POP_ITER
+                EXTENDED_ARG             1
+                JUMP_BACKWARD          453 (to L2)
+
+ 109    L8:     END_FOR
+                POP_ITER
+
+ 134            LOAD_FAST_BORROW_LOAD_FAST_BORROW 171 (total_loss, total_num_examples)
+                BINARY_OP               11 (/)
+                STORE_FAST              23 (avg_training_loss)
+
+ 135            LOAD_FAST_BORROW_LOAD_FAST_BORROW 203 (train_correct, total_num_examples)
+                BINARY_OP               11 (/)
+                STORE_FAST              24 (train_acc)
+
+ 136            LOAD_FAST_BORROW         3 (scheduler)
+                LOAD_ATTR               61 (step + NULL|self)
+                LOAD_FAST_BORROW        24 (train_acc)
+                CALL                     1
+                POP_TOP
+
+ 138            LOAD_FAST_BORROW         0 (self)
+                LOAD_ATTR               63 (eval + NULL|self)
+                CALL                     0
+                STORE_FAST              25 (test_acc)
+
+ 139            LOAD_FAST_BORROW         1 (optimizer)
+                LOAD_ATTR               64 (param_groups)
+                GET_ITER
+                LOAD_FAST_AND_CLEAR     26 (g)
+                SWAP                     2
+        L9:     BUILD_LIST               0
+                SWAP                     2
+       L10:     FOR_ITER                12 (to L11)
+                STORE_FAST              26 (g)
+                LOAD_FAST_BORROW        26 (g)
+                LOAD_CONST              16 ('lr')
+                BINARY_OP               26 ([])
+                LIST_APPEND              2
+                JUMP_BACKWARD           14 (to L10)
+       L11:     END_FOR
+                POP_ITER
+       L12:     STORE_FAST              27 (cur_lr)
+                STORE_FAST              26 (g)
+
+ 140            LOAD_FAST_BORROW_LOAD_FAST_BORROW 144 (epoch, self)
+                LOAD_ATTR               10 (eval_every)
+                BINARY_OP                5 (*)
+                STORE_FAST              28 (actual_epoch)
+
+ 142            LOAD_CONST              17 ('')
+                STORE_FAST              29 (new_best_str)
+
+ 143            LOAD_SMALL_INT           0
+                STORE_FAST              30 (stopping_value)
+
+ 145            LOAD_FAST_BORROW         0 (self)
+                LOAD_ATTR               66 (stopping_criterion)
+                LOAD_GLOBAL             68 (STOP)
+                LOAD_ATTR               70 (TEST)
+                IS_OP                    0 (is)
+                POP_JUMP_IF_FALSE       46 (to L14)
+                NOT_TAKEN
+
+ 146            LOAD_FAST_BORROW        25 (test_acc)
+                LOAD_FAST_BORROW_LOAD_FAST_BORROW 72 (best_test_acc, stopping_threshold)
+                BINARY_OP                0 (+)
+                COMPARE_OP             148 (bool(>))
+                POP_JUMP_IF_FALSE       14 (to L13)
+                NOT_TAKEN
+
+ 147            LOAD_FAST               25 (test_acc)
+                STORE_FAST               4 (best_test_acc)
+
+ 148            LOAD_FAST               24 (train_acc)
+                STORE_FAST               5 (best_train_acc)
+
+ 149            LOAD_FAST               28 (actual_epoch)
+                STORE_FAST               6 (best_epoch)
+
+ 150            LOAD_SMALL_INT           0
+                STORE_FAST               7 (epochs_since_improvement)
+
+ 151            LOAD_FAST               25 (test_acc)
+                STORE_FAST              30 (stopping_value)
+
+ 152            LOAD_CONST              18 (' (new best test)')
+                STORE_FAST              29 (new_best_str)
+                JUMP_FORWARD            93 (to L16)
+
+ 154   L13:     LOAD_FAST_BORROW_LOAD_FAST_BORROW 112 (epochs_since_improvement, self)
+                LOAD_ATTR               10 (eval_every)
+                BINARY_OP               13 (+=)
+                STORE_FAST               7 (epochs_since_improvement)
+                JUMP_FORWARD            74 (to L16)
+
+ 155   L14:     LOAD_FAST_BORROW         0 (self)
+                LOAD_ATTR               66 (stopping_criterion)
+                LOAD_GLOBAL             68 (STOP)
+                LOAD_ATTR               72 (TRAIN)
+                IS_OP                    0 (is)
+                POP_JUMP_IF_FALSE       45 (to L16)
+                NOT_TAKEN
+
+ 156            LOAD_FAST_BORROW        24 (train_acc)
+                LOAD_FAST_BORROW_LOAD_FAST_BORROW 88 (best_train_acc, stopping_threshold)
+                BINARY_OP                0 (+)
+                COMPARE_OP             148 (bool(>))
+                POP_JUMP_IF_FALSE       14 (to L15)
+                NOT_TAKEN
+
+ 157            LOAD_FAST               24 (train_acc)
+                STORE_FAST               5 (best_train_acc)
+
+ 158            LOAD_FAST               25 (test_acc)
+                STORE_FAST               4 (best_test_acc)
+
+ 159            LOAD_FAST               28 (actual_epoch)
+                STORE_FAST               6 (best_epoch)
+
+ 160            LOAD_SMALL_INT           0
+                STORE_FAST               7 (epochs_since_improvement)
+
+ 161            LOAD_FAST               24 (train_acc)
+                STORE_FAST              30 (stopping_value)
+
+ 162            LOAD_CONST              19 (' (new best train)')
+                STORE_FAST              29 (new_best_str)
+                JUMP_FORWARD            18 (to L16)
+
+ 164   L15:     LOAD_FAST_BORROW_LOAD_FAST_BORROW 112 (epochs_since_improvement, self)
+                LOAD_ATTR               10 (eval_every)
+                BINARY_OP               13 (+=)
+                STORE_FAST               7 (epochs_since_improvement)
+
+ 166   L16:     LOAD_GLOBAL             15 (print + NULL)
+
+ 167            LOAD_CONST              20 ('Epoch ')
+                LOAD_FAST_BORROW        28 (actual_epoch)
+                FORMAT_SIMPLE
+                LOAD_CONST              21 (', LR: ')
+                LOAD_FAST_BORROW        27 (cur_lr)
+                FORMAT_SIMPLE
+                LOAD_CONST              22 (': Train loss: ')
+                LOAD_FAST_BORROW        23 (avg_training_loss)
+                LOAD_CONST              23 ('.7f')
+                FORMAT_WITH_SPEC
+                LOAD_CONST              24 (', Train acc: ')
+                LOAD_FAST_BORROW        24 (train_acc)
+                LOAD_CONST              25 ('.4f')
+                FORMAT_WITH_SPEC
+                LOAD_CONST              26 (', Test accuracy: ')
+                LOAD_FAST_BORROW        25 (test_acc)
+                LOAD_CONST              25 ('.4f')
+                FORMAT_WITH_SPEC
+                LOAD_FAST_BORROW        29 (new_best_str)
+                FORMAT_SIMPLE
+                BUILD_STRING            11
+
+ 166            CALL                     1
+                POP_TOP
+
+ 169            LOAD_FAST_BORROW        30 (stopping_value)
+                LOAD_CONST              27 (0.9999)
+                COMPARE_OP             188 (bool(>=))
+                POP_JUMP_IF_FALSE       19 (to L17)
+                NOT_TAKEN
+
+ 170            LOAD_GLOBAL             15 (print + NULL)
+                LOAD_CONST              28 ('Achieved near-perfect accuracy (')
+                LOAD_FAST_BORROW        30 (stopping_value)
+                LOAD_CONST              25 ('.4f')
+                FORMAT_WITH_SPEC
+                LOAD_CONST              29 ('), stopping.')
+                BUILD_STRING             3
+                CALL                     1
+                POP_TOP
+
+ 171            POP_TOP
+                JUMP_FORWARD            39 (to L20)
+
+ 173   L17:     LOAD_FAST_BORROW         7 (epochs_since_improvement)
+                LOAD_CONST              30 (2000)
+                COMPARE_OP             188 (bool(>=))
+                POP_JUMP_IF_TRUE         4 (to L18)
+                NOT_TAKEN
+                EXTENDED_ARG             3
+                JUMP_BACKWARD          832 (to L1)
+
+ 174   L18:     LOAD_GLOBAL             15 (print + NULL)
+                LOAD_CONST              31 ('2000 epochs without ')
+                LOAD_FAST_BORROW         0 (self)
+                LOAD_ATTR               66 (stopping_criterion)
+                FORMAT_SIMPLE
+                LOAD_CONST              32 (' improvement, stopping.')
+                BUILD_STRING             3
+                CALL                     1
+                POP_TOP
+
+ 175            POP_TOP
+                JUMP_FORWARD             2 (to L20)
+
+ 101   L19:     END_FOR
+                POP_ITER
+
+ 177   L20:     LOAD_GLOBAL             15 (print + NULL)
+                LOAD_CONST              33 ('Best train acc: ')
+                LOAD_FAST_BORROW         5 (best_train_acc)
+                LOAD_CONST              25 ('.4f')
+                FORMAT_WITH_SPEC
+                LOAD_CONST              34 (', epoch: ')
+                LOAD_FAST_BORROW         6 (best_epoch)
+                FORMAT_SIMPLE
+                BUILD_STRING             4
+                CALL                     1
+                POP_TOP
+
+ 179            LOAD_FAST_BORROW_LOAD_FAST_BORROW 84 (best_train_acc, best_test_acc)
+                LOAD_FAST_BORROW         6 (best_epoch)
+                BUILD_TUPLE              3
+                RETURN_VALUE
+
+  --   L21:     SWAP                     2
+                POP_TOP
+
+ 139            SWAP                     2
+                STORE_FAST              26 (g)
+                RERAISE                  0
+ExceptionTable:
+  L9 to L12 -> L21 [3]
+
+Disassembly of <code object eval at 0x11d6049a0, file "/Users/nilscollins/Documents/TUM/bottleneck/experiment.py", line 181>:
+ 181            RESUME                   0
+
+ 182            LOAD_FAST_BORROW         0 (self)
+                LOAD_ATTR                0 (model)
+                LOAD_ATTR                3 (eval + NULL|self)
+                CALL                     0
+                POP_TOP
+
+ 183            LOAD_GLOBAL              4 (torch)
+                LOAD_ATTR                6 (no_grad)
+                PUSH_NULL
+                CALL                     0
+                COPY                     1
+                LOAD_SPECIAL             1 (__exit__)
+                SWAP                     2
+                SWAP                     3
+                LOAD_SPECIAL             0 (__enter__)
+                CALL                     0
+        L1:     POP_TOP
+
+ 184            LOAD_FAST_BORROW         0 (self)
+                LOAD_ATTR                8 (device)
+                LOAD_ATTR               10 (type)
+                LOAD_CONST               0 ('cuda')
+                COMPARE_OP              72 (==)
+                STORE_FAST               1 (pin_memory)
+
+ 185            LOAD_GLOBAL             13 (DataLoader + NULL)
+                LOAD_FAST_BORROW         0 (self)
+                LOAD_ATTR               14 (X_test)
+                LOAD_FAST_BORROW         0 (self)
+                LOAD_ATTR               16 (batch_size)
+                LOAD_CONST               1 (False)
+
+ 186            LOAD_FAST_LOAD_FAST     16 (pin_memory, self)
+                LOAD_ATTR               18 (loader_workers)
+
+ 187            LOAD_FAST_BORROW         0 (self)
+                LOAD_ATTR               18 (loader_workers)
+                LOAD_SMALL_INT           0
+                COMPARE_OP             148 (bool(>))
+                POP_JUMP_IF_FALSE       13 (to L2)
+                NOT_TAKEN
+                LOAD_FAST_BORROW         0 (self)
+                LOAD_ATTR               20 (worker_init_fn)
+                JUMP_FORWARD             1 (to L3)
+        L2:     LOAD_CONST               2 (None)
+
+ 185    L3:     LOAD_CONST               3 (('batch_size', 'shuffle', 'pin_memory', 'num_workers', 'worker_init_fn'))
+                CALL_KW                  6
+                STORE_FAST               2 (loader)
+
+ 189            LOAD_SMALL_INT           0
+                STORE_FAST               3 (total_correct)
+
+ 190            LOAD_SMALL_INT           0
+                STORE_FAST               4 (total_examples)
+
+ 191            LOAD_FAST_BORROW         2 (loader)
+                GET_ITER
+        L4:     FOR_ITER               161 (to L5)
+                STORE_FAST               5 (batch)
+
+ 192            LOAD_FAST_BORROW         5 (batch)
+                LOAD_ATTR               23 (to + NULL|self)
+                LOAD_FAST_BORROW         0 (self)
+                LOAD_ATTR                8 (device)
+                CALL                     1
+                STORE_FAST               5 (batch)
+
+ 193            LOAD_FAST_BORROW         0 (self)
+                LOAD_ATTR                1 (model + NULL|self)
+                LOAD_FAST_BORROW         5 (batch)
+                CALL                     1
+                STORE_FAST               6 (out)
+
+ 194            LOAD_FAST_BORROW         6 (out)
+                LOAD_ATTR               25 (max + NULL|self)
+                LOAD_SMALL_INT           1
+                LOAD_CONST               4 (('dim',))
+                CALL_KW                  1
+                UNPACK_SEQUENCE          2
+                STORE_FAST_STORE_FAST  120 (_, pred)
+
+ 195            LOAD_FAST_BORROW_LOAD_FAST_BORROW 56 (total_correct, pred)
+                LOAD_ATTR               27 (eq + NULL|self)
+                LOAD_FAST_BORROW         5 (batch)
+                LOAD_ATTR               28 (y)
+                CALL                     1
+                LOAD_ATTR               31 (sum + NULL|self)
+                CALL                     0
+                LOAD_ATTR               33 (item + NULL|self)
+                CALL                     0
+                BINARY_OP               13 (+=)
+                STORE_FAST               3 (total_correct)
+
+ 196            LOAD_FAST_BORROW_LOAD_FAST_BORROW 69 (total_examples, batch)
+                LOAD_ATTR               28 (y)
+                LOAD_ATTR               35 (size + NULL|self)
+                LOAD_SMALL_INT           0
+                CALL                     1
+                BINARY_OP               13 (+=)
+                STORE_FAST               4 (total_examples)
+                JUMP_BACKWARD          163 (to L4)
+
+ 191    L5:     END_FOR
+                POP_ITER
+
+ 197            LOAD_FAST_BORROW_LOAD_FAST_BORROW 52 (total_correct, total_examples)
+                BINARY_OP               11 (/)
+                STORE_FAST               9 (acc)
+
+ 198            LOAD_FAST_BORROW         9 (acc)
+
+ 183    L6:     SWAP                     3
+                SWAP                     2
+                LOAD_CONST               2 (None)
+                LOAD_CONST               2 (None)
+                LOAD_CONST               2 (None)
+                CALL                     3
+                POP_TOP
+                RETURN_VALUE
+        L7:     PUSH_EXC_INFO
+                WITH_EXCEPT_START
+                TO_BOOL
+                POP_JUMP_IF_TRUE         2 (to L8)
+                NOT_TAKEN
+                RERAISE                  2
+        L8:     POP_TOP
+        L9:     POP_EXCEPT
+                POP_TOP
+                POP_TOP
+                POP_TOP
+                LOAD_CONST               2 (None)
+                RETURN_VALUE
+
+  --   L10:     COPY                     3
+                POP_EXCEPT
+                RERAISE                  1
+ExceptionTable:
+  L1 to L6 -> L7 [2] lasti
+  L7 to L9 -> L10 [4] lasti

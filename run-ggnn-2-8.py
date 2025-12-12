@@ -5,13 +5,13 @@ from experiment import Experiment
 import torch
 
 override_params = {
-    2: {'batch_size': 1024, 'eval_every': 2000},
-    3: {'batch_size': 1024},
-    4: {'batch_size': 2048},
-    5: {'batch_size': 2048},
-    6: {'batch_size': 2048},
-    7: {'batch_size': 4096},
-    8: {'batch_size': 2048, 'accum_grad': 2},  # eff 4096, safe
+    2: {'batch_size': 64, 'eval_every': 100},
+    3: {'batch_size': 64},
+    4: {'batch_size': 1024},
+    5: {'batch_size': 1024},
+    6: {'batch_size': 1024},
+    7: {'batch_size': 1024, 'accum_grad': 2},
+    8: {'batch_size': 512, 'accum_grad': 4},  # effective batch size of 2048, with less GPU memory
 }
 
 
@@ -35,8 +35,7 @@ if __name__ == '__main__':
     for depth in range(min_depth, max_depth + 1):
         num_layers = depth + 1
         args = main.get_fake_args(task=task, depth=depth, num_layers=num_layers, loader_workers=7,
-                                  type=gnn_type, stop=stopping_criterion,
-                                  no_layer_norm=True, no_activation=True, no_residual=True)
+                                  type=gnn_type, stop=stopping_criterion)
         if depth in override_params:
             for key, value in AttrDict(override_params[depth]).items():
                 args[key] = value

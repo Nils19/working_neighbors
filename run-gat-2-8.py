@@ -5,13 +5,13 @@ from experiment import Experiment
 import torch
 
 override_params = {
-    2: {'batch_size': 1024, 'eval_every': 2000},
-    3: {'batch_size': 1024},
-    4: {'batch_size': 2048},
-    5: {'batch_size': 2048},
-    6: {'batch_size': 2048},
-    7: {'batch_size': 4096},
-    8: {'batch_size': 2048, 'accum_grad': 2},  # eff 4096, safe
+    2: {'batch_size': 64, 'eval_every': 1000},
+    3: {'batch_size': 64},
+    4: {'batch_size': 1024},
+    5: {'batch_size': 1024, 'dim': 64},  # Increase dim for 32 classes (64/4 heads = 16 dim/head)
+    6: {'batch_size': 1024, 'dim': 64},  # Increase dim for 64 classes
+    7: {'batch_size': 2048, 'dim': 128},  # Increase dim for 128 classes (128/4 heads = 32 dim/head)
+    8: {'batch_size': 1024, 'accum_grad': 2, 'dim': 128},  # Increase dim for 256 classes
 }
 
 
@@ -28,15 +28,14 @@ if __name__ == '__main__':
     task = Task.NEIGHBORS_MATCH
     gnn_type = GNN_TYPE.GAT
     stopping_criterion = STOP.TRAIN
-    min_depth = 2
+    min_depth = 5
     max_depth = 8
 
     results_all_depths = {}
     for depth in range(min_depth, max_depth + 1):
         num_layers = depth + 1
         args = main.get_fake_args(task=task, depth=depth, num_layers=num_layers, loader_workers=7,
-                                  type=gnn_type, stop=stopping_criterion,
-                                  no_activation=True, no_residual=False)
+                                  type=gnn_type, stop=stopping_criterion)
         if depth in override_params:
             for key, value in AttrDict(override_params[depth]).items():
                 args[key] = value

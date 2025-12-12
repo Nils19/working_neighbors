@@ -1,0 +1,34 @@
+Decompiling: tasks/__pycache__/dictionary_lookup.cpython-314.pyc
+Magic: 2b0e0d0a
+================================================================================
+
+Found DictionaryLookupDataset class
+
+================================================================================
+LABEL METHOD BYTECODE:
+================================================================================
+ 52           RESUME                   0
+
+ 53           LOAD_FAST_BORROW         1 (combination)
+              UNPACK_SEQUENCE          2
+              STORE_FAST_STORE_FAST   35 (selected_key, values)
+
+ 54           LOAD_GLOBAL              1 (int + NULL)
+              LOAD_FAST_BORROW_LOAD_FAST_BORROW 50 (values, selected_key)
+              LOAD_SMALL_INT           1
+              BINARY_OP               10 (-)
+              BINARY_OP               26 ([])
+              CALL                     1
+              LOAD_SMALL_INT           1
+              BINARY_OP               10 (-)
+              RETURN_VALUE
+
+================================================================================
+CONSTANTS IN LABEL METHOD:
+================================================================================
+  const[0] = 1
+
+================================================================================
+NAMES IN LABEL METHOD:
+================================================================================
+  name[0] = 'int'
