@@ -374,3 +374,4 @@ Epoch 34200, LR: [6.25e-05]: Train loss: 1.8795158, Train acc: 0.4829, Test accu
 Epoch 34300, LR: [6.25e-05]: Train loss: 1.8796269, Train acc: 0.4829, Test accuracy: 0.0211
 Epoch 34400, LR: [6.25e-05]: Train loss: 1.8789338, Train acc: 0.4831, Test accuracy: 0.0214
 Epoch 34500, LR: [6.25e-05]: Train loss: 1.8793253, Train acc: 0.4829, Test accuracy: 0.0217
+Epoch 34600, LR: [6.25e-05]: Train loss: 1.8810210, Train acc: 0.4822, Test accuracy: 0.0219
