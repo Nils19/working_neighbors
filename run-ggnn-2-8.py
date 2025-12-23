@@ -7,11 +7,11 @@ import torch
 override_params = {
     2: {'batch_size': 64, 'eval_every': 100},
     3: {'batch_size': 64},
-    4: {'batch_size': 1024},
-    5: {'batch_size': 1024},
-    6: {'batch_size': 1024},
-    7: {'batch_size': 1024, 'accum_grad': 2},
-    8: {'batch_size': 512, 'accum_grad': 4},  # effective batch size of 2048, with less GPU memory
+    4: {'batch_size': 1024, 'dim' : 64},
+    5: {'batch_size': 1024, 'dim' : 64},
+    6: {'batch_size': 1024, 'dim' : 64},
+    7: {'batch_size': 1024, 'dim' : 64, 'accum_grad': 2},
+    8: {'batch_size': 512, 'dim' : 64, 'accum_grad': 4},  # effective batch size of 2048, with less GPU memory
 }
 
 
@@ -28,7 +28,7 @@ if __name__ == '__main__':
     task = Task.NEIGHBORS_MATCH
     gnn_type = GNN_TYPE.GGNN
     stopping_criterion = STOP.TRAIN
-    min_depth = 2
+    min_depth = 4
     max_depth = 8
 
     results_all_depths = {}

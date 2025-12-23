@@ -5,9 +5,9 @@ from experiment import Experiment
 import torch
 
 override_params = {
-    2: {'batch_size': 64, 'eval_every': 1000},
+    2: {'batch_size': 64, 'eval_every': 100},
     3: {'batch_size': 64},
-    4: {'batch_size': 1024},
+    4: {'batch_size': 1024, 'dim' : 64},
     5: {'batch_size': 1024, 'dim': 64},  # Increase dim for 32 classes (64/4 heads = 16 dim/head)
     6: {'batch_size': 1024, 'dim': 64},  # Increase dim for 64 classes
     7: {'batch_size': 2048, 'dim': 128},  # Increase dim for 128 classes (128/4 heads = 32 dim/head)
@@ -28,7 +28,7 @@ if __name__ == '__main__':
     task = Task.NEIGHBORS_MATCH
     gnn_type = GNN_TYPE.GAT
     stopping_criterion = STOP.TRAIN
-    min_depth = 5
+    min_depth = 2
     max_depth = 8
 
     results_all_depths = {}

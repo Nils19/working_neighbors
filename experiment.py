@@ -130,6 +130,9 @@ class Experiment():
                     if (i + 1) % self.accum_grad == 0:
                         optimizer.step()
                         optimizer.zero_grad()
+                if (i + 1) % self.accum_grad != 0:
+                    optimizer.step()
+                    optimizer.zero_grad()
 
             avg_training_loss = total_loss / total_num_examples
             train_acc = train_correct / total_num_examples
