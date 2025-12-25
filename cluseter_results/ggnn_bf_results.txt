@@ -1348,3 +1348,185 @@ Epoch 34200, LR: [1.5625e-05]: Train loss: 3.1028529, Train acc: 0.2080, Test ac
 Epoch 34300, LR: [1.5625e-05]: Train loss: 3.1027505, Train acc: 0.2080, Test accuracy: 0.0138
 Epoch 34400, LR: [1.5625e-05]: Train loss: 3.1027325, Train acc: 0.2081, Test accuracy: 0.0136
 Epoch 34500, LR: [1.5625e-05]: Train loss: 3.1026705, Train acc: 0.2081, Test accuracy: 0.0130
+Epoch 34600, LR: [1.5625e-05]: Train loss: 3.1026114, Train acc: 0.2080, Test accuracy: 0.0141
+Epoch 34700, LR: [1.5625e-05]: Train loss: 3.1025192, Train acc: 0.2081, Test accuracy: 0.0134
+Epoch 34800, LR: [1.5625e-05]: Train loss: 3.1024918, Train acc: 0.2082, Test accuracy: 0.0134 (new best train)
+Epoch 34900, LR: [1.5625e-05]: Train loss: 3.1024052, Train acc: 0.2082, Test accuracy: 0.0133
+Epoch 35000, LR: [1.5625e-05]: Train loss: 3.1023620, Train acc: 0.2081, Test accuracy: 0.0133
+Epoch 35100, LR: [1.5625e-05]: Train loss: 3.1022949, Train acc: 0.2082, Test accuracy: 0.0136
+Epoch 35200, LR: [1.5625e-05]: Train loss: 3.1022454, Train acc: 0.2082, Test accuracy: 0.0142
+Epoch 35300, LR: [1.5625e-05]: Train loss: 3.1021678, Train acc: 0.2082, Test accuracy: 0.0138
+Epoch 35400, LR: [1.5625e-05]: Train loss: 3.1021404, Train acc: 0.2083, Test accuracy: 0.0144 (new best train)
+Epoch 35500, LR: [1.5625e-05]: Train loss: 3.1020674, Train acc: 0.2083, Test accuracy: 0.0141
+Epoch 35600, LR: [1.5625e-05]: Train loss: 3.1019934, Train acc: 0.2083, Test accuracy: 0.0139
+Epoch 35700, LR: [1.5625e-05]: Train loss: 3.1019568, Train acc: 0.2083, Test accuracy: 0.0141
+Epoch 35800, LR: [1.5625e-05]: Train loss: 3.1019084, Train acc: 0.2083, Test accuracy: 0.0134
+Epoch 35900, LR: [1.5625e-05]: Train loss: 3.1018799, Train acc: 0.2083, Test accuracy: 0.0136
+Epoch 36000, LR: [1.5625e-05]: Train loss: 3.1018117, Train acc: 0.2084, Test accuracy: 0.0141 (new best train)
+Epoch 36100, LR: [1.5625e-05]: Train loss: 3.1017693, Train acc: 0.2084, Test accuracy: 0.0138
+Epoch 36200, LR: [1.5625e-05]: Train loss: 3.1016898, Train acc: 0.2084, Test accuracy: 0.0134
+Epoch 36300, LR: [1.5625e-05]: Train loss: 3.1016481, Train acc: 0.2084, Test accuracy: 0.0136
+Epoch 36400, LR: [1.5625e-05]: Train loss: 3.1015914, Train acc: 0.2084, Test accuracy: 0.0139
+Epoch 36500, LR: [1.5625e-05]: Train loss: 3.1015726, Train acc: 0.2084, Test accuracy: 0.0136
+Epoch 36600, LR: [1.5625e-05]: Train loss: 3.1014868, Train acc: 0.2084, Test accuracy: 0.0133
+Epoch 36700, LR: [1.5625e-05]: Train loss: 3.1014445, Train acc: 0.2084, Test accuracy: 0.0131
+Epoch 36800, LR: [1.5625e-05]: Train loss: 3.1013711, Train acc: 0.2084, Test accuracy: 0.0138
+Epoch 36900, LR: [1.5625e-05]: Train loss: 3.1013438, Train acc: 0.2084, Test accuracy: 0.0134
+Epoch 37000, LR: [1.5625e-05]: Train loss: 3.1013099, Train acc: 0.2084, Test accuracy: 0.0142
+Epoch 37100, LR: [7.8125e-06]: Train loss: 3.1012096, Train acc: 0.2085, Test accuracy: 0.0134
+Epoch 37200, LR: [7.8125e-06]: Train loss: 3.0989643, Train acc: 0.2089, Test accuracy: 0.0133 (new best train)
+Epoch 37300, LR: [7.8125e-06]: Train loss: 3.0989527, Train acc: 0.2089, Test accuracy: 0.0136
+Epoch 37400, LR: [7.8125e-06]: Train loss: 3.0989197, Train acc: 0.2090, Test accuracy: 0.0134
+Epoch 37500, LR: [7.8125e-06]: Train loss: 3.0989015, Train acc: 0.2089, Test accuracy: 0.0138
+Epoch 37600, LR: [7.8125e-06]: Train loss: 3.0988649, Train acc: 0.2090, Test accuracy: 0.0133
+Epoch 37700, LR: [7.8125e-06]: Train loss: 3.0988278, Train acc: 0.2090, Test accuracy: 0.0133
+Epoch 37800, LR: [7.8125e-06]: Train loss: 3.0988075, Train acc: 0.2090, Test accuracy: 0.0136
+Epoch 37900, LR: [7.8125e-06]: Train loss: 3.0987965, Train acc: 0.2090, Test accuracy: 0.0134
+Epoch 38000, LR: [7.8125e-06]: Train loss: 3.0987342, Train acc: 0.2091, Test accuracy: 0.0130 (new best train)
+Epoch 38100, LR: [7.8125e-06]: Train loss: 3.0987014, Train acc: 0.2091, Test accuracy: 0.0133
+Epoch 38200, LR: [7.8125e-06]: Train loss: 3.0986877, Train acc: 0.2090, Test accuracy: 0.0138
+Epoch 38300, LR: [7.8125e-06]: Train loss: 3.0986495, Train acc: 0.2091, Test accuracy: 0.0131
+Epoch 38400, LR: [7.8125e-06]: Train loss: 3.0986257, Train acc: 0.2091, Test accuracy: 0.0136
+Epoch 38500, LR: [7.8125e-06]: Train loss: 3.0985906, Train acc: 0.2092, Test accuracy: 0.0139
+Epoch 38600, LR: [7.8125e-06]: Train loss: 3.0985567, Train acc: 0.2092, Test accuracy: 0.0138 (new best train)
+Epoch 38700, LR: [7.8125e-06]: Train loss: 3.0985191, Train acc: 0.2092, Test accuracy: 0.0133
+Epoch 38800, LR: [7.8125e-06]: Train loss: 3.0984930, Train acc: 0.2092, Test accuracy: 0.0133
+Epoch 38900, LR: [7.8125e-06]: Train loss: 3.0984618, Train acc: 0.2093, Test accuracy: 0.0138
+Epoch 39000, LR: [7.8125e-06]: Train loss: 3.0984293, Train acc: 0.2092, Test accuracy: 0.0133
+Epoch 39100, LR: [7.8125e-06]: Train loss: 3.0983951, Train acc: 0.2093, Test accuracy: 0.0138
+Epoch 39200, LR: [7.8125e-06]: Train loss: 3.0983954, Train acc: 0.2093, Test accuracy: 0.0136
+Epoch 39300, LR: [7.8125e-06]: Train loss: 3.0983455, Train acc: 0.2093, Test accuracy: 0.0136 (new best train)
+Epoch 39400, LR: [7.8125e-06]: Train loss: 3.0983276, Train acc: 0.2093, Test accuracy: 0.0133
+Epoch 39500, LR: [7.8125e-06]: Train loss: 3.0983241, Train acc: 0.2093, Test accuracy: 0.0131
+Epoch 39600, LR: [7.8125e-06]: Train loss: 3.0982746, Train acc: 0.2093, Test accuracy: 0.0134
+Epoch 39700, LR: [7.8125e-06]: Train loss: 3.0982490, Train acc: 0.2094, Test accuracy: 0.0138 (new best train)
+Epoch 39800, LR: [7.8125e-06]: Train loss: 3.0982214, Train acc: 0.2094, Test accuracy: 0.0141
+Epoch 39900, LR: [7.8125e-06]: Train loss: 3.0981936, Train acc: 0.2094, Test accuracy: 0.0133
+Epoch 40000, LR: [7.8125e-06]: Train loss: 3.0981607, Train acc: 0.2094, Test accuracy: 0.0138
+Epoch 40100, LR: [7.8125e-06]: Train loss: 3.0981357, Train acc: 0.2094, Test accuracy: 0.0133
+Epoch 40200, LR: [7.8125e-06]: Train loss: 3.0981041, Train acc: 0.2094, Test accuracy: 0.0131
+Epoch 40300, LR: [7.8125e-06]: Train loss: 3.0980816, Train acc: 0.2094, Test accuracy: 0.0133
+Epoch 40400, LR: [7.8125e-06]: Train loss: 3.0980545, Train acc: 0.2094, Test accuracy: 0.0139
+Epoch 40500, LR: [7.8125e-06]: Train loss: 3.0980377, Train acc: 0.2094, Test accuracy: 0.0134
+Epoch 40600, LR: [7.8125e-06]: Train loss: 3.0980058, Train acc: 0.2094, Test accuracy: 0.0134
+Epoch 40700, LR: [7.8125e-06]: Train loss: 3.0979867, Train acc: 0.2095, Test accuracy: 0.0134
+Epoch 40800, LR: [3.90625e-06]: Train loss: 3.0979603, Train acc: 0.2094, Test accuracy: 0.0134
+Epoch 40900, LR: [3.90625e-06]: Train loss: 3.0968019, Train acc: 0.2098, Test accuracy: 0.0136 (new best train)
+Epoch 41000, LR: [3.90625e-06]: Train loss: 3.0968000, Train acc: 0.2098, Test accuracy: 0.0134
+Epoch 41100, LR: [3.90625e-06]: Train loss: 3.0967827, Train acc: 0.2098, Test accuracy: 0.0136
+Epoch 41200, LR: [3.90625e-06]: Train loss: 3.0967702, Train acc: 0.2099, Test accuracy: 0.0133
+Epoch 41300, LR: [3.90625e-06]: Train loss: 3.0967574, Train acc: 0.2098, Test accuracy: 0.0136
+Epoch 41400, LR: [3.90625e-06]: Train loss: 3.0967341, Train acc: 0.2098, Test accuracy: 0.0133
+Epoch 41500, LR: [3.90625e-06]: Train loss: 3.0967127, Train acc: 0.2099, Test accuracy: 0.0136
+Epoch 41600, LR: [3.90625e-06]: Train loss: 3.0967165, Train acc: 0.2099, Test accuracy: 0.0138
+Epoch 41700, LR: [3.90625e-06]: Train loss: 3.0966913, Train acc: 0.2099, Test accuracy: 0.0141
+Epoch 41800, LR: [3.90625e-06]: Train loss: 3.0966755, Train acc: 0.2099, Test accuracy: 0.0138
+Epoch 41900, LR: [3.90625e-06]: Train loss: 3.0966694, Train acc: 0.2099, Test accuracy: 0.0138
+Epoch 42000, LR: [1.953125e-06]: Train loss: 3.0966484, Train acc: 0.2099, Test accuracy: 0.0136
+Epoch 42100, LR: [1.953125e-06]: Train loss: 3.0960837, Train acc: 0.2101, Test accuracy: 0.0136 (new best train)
+Epoch 42200, LR: [1.953125e-06]: Train loss: 3.0960823, Train acc: 0.2101, Test accuracy: 0.0134
+Epoch 42300, LR: [1.953125e-06]: Train loss: 3.0960680, Train acc: 0.2101, Test accuracy: 0.0136
+Epoch 42400, LR: [1.953125e-06]: Train loss: 3.0960647, Train acc: 0.2101, Test accuracy: 0.0134
+Epoch 42500, LR: [1.953125e-06]: Train loss: 3.0960567, Train acc: 0.2101, Test accuracy: 0.0139
+Epoch 42600, LR: [1.953125e-06]: Train loss: 3.0960485, Train acc: 0.2101, Test accuracy: 0.0136
+Epoch 42700, LR: [1.953125e-06]: Train loss: 3.0960412, Train acc: 0.2101, Test accuracy: 0.0134
+Epoch 42800, LR: [1.953125e-06]: Train loss: 3.0960343, Train acc: 0.2101, Test accuracy: 0.0134
+Epoch 42900, LR: [1.953125e-06]: Train loss: 3.0960270, Train acc: 0.2101, Test accuracy: 0.0138
+Epoch 43000, LR: [1.953125e-06]: Train loss: 3.0960198, Train acc: 0.2101, Test accuracy: 0.0138
+Epoch 43100, LR: [1.953125e-06]: Train loss: 3.0960097, Train acc: 0.2101, Test accuracy: 0.0136
+Epoch 43200, LR: [9.765625e-07]: Train loss: 3.0960046, Train acc: 0.2102, Test accuracy: 0.0138
+Epoch 43300, LR: [9.765625e-07]: Train loss: 3.0957236, Train acc: 0.2102, Test accuracy: 0.0136
+Epoch 43400, LR: [9.765625e-07]: Train loss: 3.0957210, Train acc: 0.2102, Test accuracy: 0.0136
+Epoch 43500, LR: [9.765625e-07]: Train loss: 3.0957173, Train acc: 0.2102, Test accuracy: 0.0136
+Epoch 43600, LR: [9.765625e-07]: Train loss: 3.0957122, Train acc: 0.2102, Test accuracy: 0.0138
+Epoch 43700, LR: [9.765625e-07]: Train loss: 3.0957090, Train acc: 0.2102, Test accuracy: 0.0136
+Epoch 43800, LR: [9.765625e-07]: Train loss: 3.0957052, Train acc: 0.2102, Test accuracy: 0.0136
+Epoch 43900, LR: [9.765625e-07]: Train loss: 3.0957011, Train acc: 0.2102, Test accuracy: 0.0136
+Epoch 44000, LR: [9.765625e-07]: Train loss: 3.0956996, Train acc: 0.2102, Test accuracy: 0.0136
+Epoch 44100, LR: [9.765625e-07]: Train loss: 3.0956941, Train acc: 0.2102, Test accuracy: 0.0136 (new best train)
+Epoch 44200, LR: [9.765625e-07]: Train loss: 3.0956895, Train acc: 0.2102, Test accuracy: 0.0136
+Epoch 44300, LR: [9.765625e-07]: Train loss: 3.0956861, Train acc: 0.2102, Test accuracy: 0.0136
+Epoch 44400, LR: [9.765625e-07]: Train loss: 3.0956817, Train acc: 0.2102, Test accuracy: 0.0136
+Epoch 44500, LR: [9.765625e-07]: Train loss: 3.0956800, Train acc: 0.2102, Test accuracy: 0.0136
+Epoch 44600, LR: [9.765625e-07]: Train loss: 3.0956749, Train acc: 0.2102, Test accuracy: 0.0136
+Epoch 44700, LR: [9.765625e-07]: Train loss: 3.0956711, Train acc: 0.2102, Test accuracy: 0.0138
+Epoch 44800, LR: [9.765625e-07]: Train loss: 3.0956698, Train acc: 0.2102, Test accuracy: 0.0136
+Epoch 44900, LR: [9.765625e-07]: Train loss: 3.0956640, Train acc: 0.2102, Test accuracy: 0.0136
+Epoch 45000, LR: [9.765625e-07]: Train loss: 3.0956616, Train acc: 0.2102, Test accuracy: 0.0136
+Epoch 45100, LR: [9.765625e-07]: Train loss: 3.0956573, Train acc: 0.2103, Test accuracy: 0.0136
+Epoch 45200, LR: [4.8828125e-07]: Train loss: 3.0956532, Train acc: 0.2102, Test accuracy: 0.0136
+Epoch 45300, LR: [4.8828125e-07]: Train loss: 3.0955123, Train acc: 0.2103, Test accuracy: 0.0136
+Epoch 45400, LR: [4.8828125e-07]: Train loss: 3.0955110, Train acc: 0.2103, Test accuracy: 0.0136
+Epoch 45500, LR: [4.8828125e-07]: Train loss: 3.0955091, Train acc: 0.2103, Test accuracy: 0.0136
+Epoch 45600, LR: [4.8828125e-07]: Train loss: 3.0955071, Train acc: 0.2103, Test accuracy: 0.0136
+Epoch 45700, LR: [4.8828125e-07]: Train loss: 3.0955049, Train acc: 0.2103, Test accuracy: 0.0136
+Epoch 45800, LR: [4.8828125e-07]: Train loss: 3.0955039, Train acc: 0.2103, Test accuracy: 0.0136
+Epoch 45900, LR: [4.8828125e-07]: Train loss: 3.0955015, Train acc: 0.2103, Test accuracy: 0.0136
+Epoch 46000, LR: [4.8828125e-07]: Train loss: 3.0955009, Train acc: 0.2103, Test accuracy: 0.0136
+Epoch 46100, LR: [4.8828125e-07]: Train loss: 3.0954978, Train acc: 0.2103, Test accuracy: 0.0136
+2000 epochs without STOP.TRAIN improvement, stopping.
+Best train acc: 0.2102, epoch: 44100
+
+Warning: Forcing loader_workers=0 to avoid multiprocessing issues (was 7)
+Starting experiment
+Using device: cuda
+GPU: NVIDIA RTX 4000 Ada Generation
+GPU Memory: 19.67 GB
+task: Task.NEIGHBORS_MATCH
+type: GNN_TYPE.GGNN
+dim: 32
+depth: 7
+num_layers: 8
+train_fraction: 0.8
+max_epochs: 50000
+eval_every: 100
+batch_size: 1024
+accum_grad: 2
+stop: STOP.TRAIN
+patience: 20
+loader_workers: 7
+last_layer_fully_adjacent: False
+no_layer_norm: False
+no_activation: False
+no_residual: False
+unroll: False
+
+Training examples: 25600, test examples: 6400
+Starting training
+/working_neighbors/experiment.py:111: UserWarning: 'data.DataLoader' is deprecated, use 'loader.DataLoader' instead
+  loader = DataLoader(self.X_train, batch_size=self.batch_size, shuffle=True,
+Traceback (most recent call last):
+  File "/working_neighbors/run-ggnn-2-8.py", line 42, in <module>
+    train_acc, test_acc, epoch = Experiment(args).run()
+                                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "/working_neighbors/experiment.py", line 117, in run
+    out = self.model(batch)
+          ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/working_neighbors/models/graph_model.py", line 73, in forward
+    x = self.layers[0](x, edge_index)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch_geometric/nn/conv/gated_graph_conv.py", line 80, in forward
+    x = self.rnn(m, x)
+        ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/rnn.py", line 1477, in forward
+    ret = _VF.gru_cell(
+          ^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 160.00 MiB. GPU 0 has a total capacity of 19.67 GiB of which 85.81 MiB is free. Process 54168 has 1.40 GiB memory in use. Process 894888 has 14.76 GiB memory in use. Process 1104418 has 3.42 GiB memory in use. Of the allocated memory 3.19 GiB is allocated by PyTorch, and 43.08 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
